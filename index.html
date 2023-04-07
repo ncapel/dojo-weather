@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="generateTemperatures()">
+    <div class="container">
+        <div class="nav">
+                <h1>DojoWeather</h1>
+                <div class="nav-links">
+                    <a href="#" onclick="alert('Loading weather report...'); generateTemperatures(); updateLocationName(this)">Burbank</a>
+                    <a href="#" onclick="alert('Loading weather report...'); generateTemperatures(); updateLocationName(this)">Chicago</a>
+                    <a href="#" onclick="alert('Loading weather report...'); generateTemperatures(); updateLocationName(this)">Dallas</a>
+                    <a href="#" onclick="alert('Loading weather report...'); generateTemperatures(); updateLocationName(this)">San Jose</a>
+                </div>
+        </div>
+        <div class="row header">
+            <h2 id="title">San Jose</h2>
+            <div class="temp-config">
+                <label for="temp-units">show temperature in </label>
+                <select name="temp-units" id="temp-units" onchange="convertTemps(this.value)">
+                    <option value="celcius">°C</option>
+                    <option value="fahrenheit">°F</option>
+                </select>
+            </div>
+        </div>
+        <div class="forecast row">
+            <div class="col weather-display">
+                <h2 class="day-of-week">Today</h2>
+                <img src="assets/some_rain.png" alt="some-rain-pic" class="weather">
+                <p class="desc row">some rain</p>
+                <div class="row temp-data">
+                    <p class="temp-high">24°</p>
+                    <p class="temp-low">18°</p>
+                </div>
+            </div>
+            <div class="col weather-display">
+                <h2 class="day-of-week">Tomorrow</h2>
+                <img src="assets/some_sun.png" alt="some-sun-pic" class="weather">
+                <p class="desc row">some sun</p>
+                <div class="row temp-data">
+                    <p class="temp-high">27°</p>
+                    <p class="temp-low">19°</p>
+                </div>
+            </div>
+            <div class="col weather-display">
+                <h2 class="day-of-week">Friday</h2>
+                <img src="assets/some_clouds.png" alt="some-clouds-pic" class="weather">
+                <p class="desc row">some clouds</p>
+                <div class="row temp-data">
+                    <p class="temp-high">21°</p>
+                    <p class="temp-low">16°</p>
+                </div>
+            </div>
+            <div class="col weather-display">
+                <h2 class="day-of-week">Saturday</h2>
+                <img src="assets/some_sun.png" alt="some-sun-pic" class="weather">
+                <p class="desc row">some sun</p>
+                <div class="row temp-data">
+                    <p class="temp-high">26°</p>
+                    <p class="temp-low">21°</p>
+                </div>
+            </div>
+        </div>
+        <div class="cookies row">
+            <img src="assets/cookie.png" alt="cookie-pic">
+            <div class="row">
+                <div class="col">
+                    <h2>Stop! Cookie time</h2>
+                    <p>We use cookies (sadly not the edible ones) to personalize 
+                    content and ads, to provide social media features and to analyse our traffic.
+                    <a href="#">Read more...</a>
+                    </p>
+                </div>
+                <button class="acc-btn" onclick="hideElement('.cookies')">I Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
